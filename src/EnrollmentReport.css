@@ -1,0 +1,33 @@
+.enroll-report{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-left: 30%;
+}
+.enr-field{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* justify-content: space-evenly; */
+}
+
+
+.stud-image{
+    height: 100px;
+    width: 100px;
+}
+
+.enr-comp-logo{
+    width: 100px;
+}
+
+.report-comp-logo{
+    margin-bottom: 26px;
+    margin-left: 11.5%;
+    padding: 10px;
+}
+
+label{
+    margin-right: 30px;
+}
+

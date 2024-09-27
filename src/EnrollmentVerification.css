@@ -1,0 +1,356 @@
+/* General Page Layout */
+.enrollment-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.header {
+    background-color: #003300;
+    display: flex;
+    color: white;
+}
+
+.contact {
+    margin-left: 13%;
+    margin-right: 2%;
+    margin-top: 8px;
+}
+
+.header-top {
+    font-size: 14px;
+    text-align: center;
+}
+
+.header-title {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header-title h1 {
+    font-size: 1.8em;
+}
+
+.header-title p {
+    font-size: 1em;
+}
+
+/* Navigation Bar */
+.logo-navbar {
+    display: flex;
+    padding: 10px 0;
+    background-color: white;
+    align-items: center;
+}
+
+
+/* enrollment verification */
+
+.enrollment-verify {
+    padding: 100px 0;
+    /* text-align: center; */
+    width: 100%;
+    height: 280px;
+    position: relative;
+    background-image: url('./4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.enrollment-verify:before {
+    content: "";
+    width: 100%;
+    height: 280px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* enrollment verification caption */
+
+.enroll-caption {
+    font-size: xx-large;
+    color: goldenrod !important;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 140px;
+    width: 100%;
+    font-size: 45px;
+    color: #ffffff;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.enroll-caption::before {
+    content: "";
+    position: absolute;
+    left: 140px;
+    bottom: -10px;
+    width: 40px;
+    height: 3px;
+    background: #FFB606;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: black;
+    /* color: white; */
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.company-image {
+    margin-left: 13%;
+    margin-right: 2%;
+}
+
+/* logo image */
+
+.logo-img {
+    /* height: 100px; */
+    width: 100px;
+}
+
+/* Verification Section */
+.verification-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.verification-title {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.verification-report,
+.verification-form {
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.verification-report h3,
+.verification-form h3 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+}
+
+.button-group {
+    display: flex;
+    justify-content: start;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.verify-btn,
+.home-btn {
+    background: #1C2CF3;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 0;
+    border: none !important;
+    clear: both;
+    text-transform: uppercase;
+}
+
+.verify-btn:hover,
+.home-btn:hover {
+    background-color: #002200;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    gap: 20px;
+
+}
+
+.footer-content>div {
+    flex: 1;
+}
+
+.enr-btn {
+    background-color: #1C2CF3;
+    color: white;
+    border-radius: 7px;
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    margin-top: 15px;
+}
+
+/* .footer-content {
+    margin-bottom: 20px;
+} */
+
+
+
+
+
+
+
+
+
+
+.copyright {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    color: #bdbcbc;
+    background: #155724;
+    padding: 15px;
+
+
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .verification-report,
+    .verification-form {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links .quick-links,
+    .footer-links .news-events {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-certifications {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certification-logos .logo {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title h1 {
+        font-size: 1.4em;
+    }
+
+    .header-title p {
+        font-size: 0.9em;
+    }
+
+    .footer-links .quick-links,
+    .footer-links .news-events {
+        width: 100%;
+    }
+
+    .verify-btn,
+    .home-btn {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+.mid-area {
+    padding: 100px;
+    width: 100%;
+}
+
+.enrollment-report h2 {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: #111111;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.form-body p {
+    color: #4c4c4c;
+}
+
+.enroll-form .title {
+    color: #FFB606;
+    border-color: grey;
+    background: white;
+    padding: 15px;
+    outline: none;
+    border: 1px solid transparent;
+    border-color: #ddd #ddd #fff;
+    width: 192px;
+    margin-bottom: -1px;
+    float: none;
+}
