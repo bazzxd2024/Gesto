@@ -3,17 +3,18 @@ import React from 'react';
 import './EnrollmentReport.css';
 import candidateImage from './sayil-getco.jpg'
 import './bts.css'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 
 
 const Report = () => {
     const location = useLocation()
+    const navigate = useNavigate()
     let { obj } = location.state
     console.log(obj)
     return (
-        <div>
+        <div  className='report-page'>
             <div className='report-comp-logo'>
                 <img className='logo-img' src={logoImage} alt="company image" />
             </div>
@@ -25,8 +26,8 @@ const Report = () => {
                                 <center> <h2>ENROLLMENT VERIFICATION REPORT</h2></center>
                             </div>
 
-                            <div className='logo-container' style={{marginTop:"20px",marginBottom:"20px"}}>
-                                <img src={obj.IMAGE} width="100" height="100" style={{marginLeft:"46%"}}/> <br></br>
+                            <div className='logo-container' style={{ marginTop: "20px", marginBottom: "20px" }}>
+                                <img src={obj.IMAGE} width="100" height="100" style={{ marginLeft: "46%" }} /> <br></br>
 
                             </div>
 
@@ -107,6 +108,10 @@ const Report = () => {
                     </div>
                 </div>
             </section >
+            <div className='back-home-ctn'>
+
+                <button className='back-home-btn' onClick={()=>{navigate("/")}}>Back</button>
+            </div>
         </div>
     )
 }

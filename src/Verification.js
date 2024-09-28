@@ -3,19 +3,21 @@ import './EnrollmentVerification.css';
 import logoImage from './gesto-logo.webp'
 import { studentData } from "./constant/constant"
 import { useNavigate } from "react-router-dom"
+import Loader from './loader';
 
 
 const EnrollmentVerification = () => {
     let obj
     const inputRef = useRef({})
     const navigate = useNavigate()
+  
     return (
         <div className="enrollment-page">
             <div className="header">
                 <div className='contact'>
                     <p>+123 012 034 056</p>
                 </div>
-                <div className='email' style={{marginTop:"8px"}}>
+                <div className='email' style={{ marginTop: "8px" }}>
                     <p>Infogestohyderabad@gmail.com</p>
                 </div>
             </div>
@@ -96,8 +98,10 @@ const EnrollmentVerification = () => {
                                         alert("Please fill the form")
                                     } else if (studentData.find(item => item.ENROLLMENT === inputRef?.current?.enrollnum)) {
                                         obj = studentData.find(item => item.ENROLLMENT === inputRef?.current?.enrollnum)
-                                       
-                                        navigate("/report",{state:{obj}})
+                                          navigate("/loader")
+                                        setTimeout(() => {
+                                            navigate("/report", { state: { obj } })
+                                        }, 2000)
                                     } else {
                                         alert("No data found with given information.")
                                     }
@@ -105,22 +109,21 @@ const EnrollmentVerification = () => {
                             >
                                 Verify
                             </button>
-                            {/* <button className="home-btn">Home</button> */}
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
 
             {/* footer */}
 
-            <footer className="footer">
+            < footer className="footer" >
                 <div className='footer-content'>
                     <div className="enroll">
                         <div className='footer-desc'>
                             <p>Students hone their skills in the industry. We thrive to make our courses extensive, highly interactive and delivered by experienced faculty</p>
                         </div>
                         <div className='enroll-btn'>
-                            <button className='enr-btn'>Enroll Now</button>
+                            <button className='enr-btn' onClick={()=>{navigate("/enroll-student")}}>Enroll Now</button>
                         </div>
                     </div>
                     <div className="reach-us">
@@ -137,11 +140,11 @@ const EnrollmentVerification = () => {
                     </div>
 
                 </div>
-            </footer>
+            </footer >
             <div className="footer-bottom">
                 <p className='copyright'>© 2024 Designed and Developed by GESTO. All Rights Reserved.</p>
             </div>
-        </div>
+        </div >
     )
 }
 
