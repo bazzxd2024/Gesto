@@ -166,7 +166,7 @@ const EnrollmentVerification = () => {
           </div>
           <div className="reach-us">
             <h3>Reach Us</h3>
-            <div className="email">Info@gestohyderabad.com</div>
+            <div className="email">support@infogestohyderabad.com</div>
           </div>
           <div className="address">
             <h3>Address</h3>
